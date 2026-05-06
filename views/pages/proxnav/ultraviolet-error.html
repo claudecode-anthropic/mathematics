@@ -177,5 +177,17 @@
       </p>
       <script src="{{src}}"></script>
     </div>
+      <script>
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+      e.preventDefault();
+    }
+  });
+
+  window.addEventListener('beforeunload', (event) => {
+  event.preventDefault();
+  event.returnValue = ''; 
+});
+</script>
   </body>
 </html>
